@@ -626,7 +626,6 @@
 #define ITEM_TM48_SKILL_SWAP ITEM_TM48
 #define ITEM_TM49_SNATCH ITEM_TM49
 #define ITEM_TM50_OVERHEAT ITEM_TM50
-
 #define ITEM_HM01_CUT ITEM_HM01
 #define ITEM_HM02_FLY ITEM_HM02
 #define ITEM_HM03_SURF ITEM_HM03
@@ -635,6 +634,7 @@
 #define ITEM_HM06_ROCK_SMASH ITEM_HM06
 #define ITEM_HM07_WATERFALL ITEM_HM07
 #define ITEM_HM08_DIVE ITEM_HM08
+
 // FireRed/LeafGreen
 #define ITEM_OAKS_PARCEL 540
 #define ITEM_POKE_FLUTE 541
@@ -705,7 +705,12 @@
 #define ITEM_TAPUNIUM_Z               602
 #define ITEM_ULTRANECROZIUM_Z         603
 
-#define ITEMS_COUNT 604
+//new shit
+#define ITEM_VOMIT_FOSSIL      	      604
+#define ITEM_TUSK_FOSSIL      	      605
+#define ITEM_DOGECOIN      	      606
+
+#define ITEMS_COUNT 607
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // Range of berries given out by various NPCS

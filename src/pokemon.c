@@ -96,6 +96,8 @@ static const struct CombinedMove sCombinedMoves[2] =
 #define SPECIES_TO_NATIONAL(name)   [SPECIES_##name - 1] = NATIONAL_DEX_##name
 #define HOENN_TO_NATIONAL(name)     [HOENN_DEX_##name - 1] = NATIONAL_DEX_##name
 
+// do not touch this, it's just there to assign list one to list two. Unless we want a separate national dex and I hope to god that we don't lol.
+
 const u16 gSpeciesToHoennPokedexNum[NUM_SPECIES] = // Assigns all species to the Hoenn Dex Index (Summary No. for Hoenn Dex)
 {
     SPECIES_TO_HOENN(TREECKO),
@@ -319,141 +321,141 @@ const u16 gSpeciesToNationalPokedexNum[NUM_SPECIES] = // Assigns all species to 
     SPECIES_TO_NATIONAL(PRIMATIO),
     SPECIES_TO_NATIONAL(OPINIMP),
     SPECIES_TO_NATIONAL(TEMPERILLA),
-    SPECIES_TO_NATIONAL(SQUIRTLE),
-    SPECIES_TO_NATIONAL(WARTORTLE),
-    SPECIES_TO_NATIONAL(BLASTOISE),
-    SPECIES_TO_NATIONAL(CATERPIE),
-    SPECIES_TO_NATIONAL(METAPOD),
-    SPECIES_TO_NATIONAL(BUTTERFREE),
-    SPECIES_TO_NATIONAL(WEEDLE),
-    SPECIES_TO_NATIONAL(KAKUNA),
-    SPECIES_TO_NATIONAL(BEEDRILL),
-    SPECIES_TO_NATIONAL(PIDGEY),
-    SPECIES_TO_NATIONAL(PIDGEOTTO),
-    SPECIES_TO_NATIONAL(PIDGEOT),
-    SPECIES_TO_NATIONAL(RATTATA),
-    SPECIES_TO_NATIONAL(RATICATE),
-    SPECIES_TO_NATIONAL(SPEAROW),
-    SPECIES_TO_NATIONAL(FEAROW),
-    SPECIES_TO_NATIONAL(EKANS),
-    SPECIES_TO_NATIONAL(ARBOK),
-    SPECIES_TO_NATIONAL(PIKACHU),
-    SPECIES_TO_NATIONAL(RAICHU),
-    SPECIES_TO_NATIONAL(SANDSHREW),
-    SPECIES_TO_NATIONAL(SANDSLASH),
-    SPECIES_TO_NATIONAL(NIDORAN_F),
-    SPECIES_TO_NATIONAL(NIDORINA),
-    SPECIES_TO_NATIONAL(NIDOQUEEN),
-    SPECIES_TO_NATIONAL(NIDORAN_M),
-    SPECIES_TO_NATIONAL(NIDORINO),
-    SPECIES_TO_NATIONAL(NIDOKING),
-    SPECIES_TO_NATIONAL(CLEFAIRY),
-    SPECIES_TO_NATIONAL(CLEFABLE),
-    SPECIES_TO_NATIONAL(VULPIX),
-    SPECIES_TO_NATIONAL(NINETALES),
-    SPECIES_TO_NATIONAL(JIGGLYPUFF),
-    SPECIES_TO_NATIONAL(WIGGLYTUFF),
-    SPECIES_TO_NATIONAL(ZUBAT),
-    SPECIES_TO_NATIONAL(GOLBAT),
+    SPECIES_TO_NATIONAL(SUBSTEE),
+    SPECIES_TO_NATIONAL(MANEMBER),
+    SPECIES_TO_NATIONAL(TRECHIBER),
+    SPECIES_TO_NATIONAL(BULBITE),
+    SPECIES_TO_NATIONAL(LAMPUPA),
+    SPECIES_TO_NATIONAL(ELECREEP),
+    SPECIES_TO_NATIONAL(ACTURUNK),
+    SPECIES_TO_NATIONAL(DRAMASPIRE),
+    SPECIES_TO_NATIONAL(BURROBIT),
+    SPECIES_TO_NATIONAL(BUNNAETHER),
+    SPECIES_TO_NATIONAL(CUCKOOB),
+    SPECIES_TO_NATIONAL(TWIDDIES),
+    SPECIES_TO_NATIONAL(AIRIOLA),
+    SPECIES_TO_NATIONAL(STANDAAD),
+    SPECIES_TO_NATIONAL(RECKLOAT),
+    SPECIES_TO_NATIONAL(DEVILOAT),
+    SPECIES_TO_NATIONAL(KITKAR),
+    SPECIES_TO_NATIONAL(CANNEKO),
+    SPECIES_TO_NATIONAL(PIKASH),
+    SPECIES_TO_NATIONAL(SONIKACHU),
+    SPECIES_TO_NATIONAL(GRUBFEED),
+    SPECIES_TO_NATIONAL(KWIZBEE),
+    SPECIES_TO_NATIONAL(COSMONARCH),
+    SPECIES_TO_NATIONAL(PAASTEL),
+    SPECIES_TO_NATIONAL(SHEEPASTRY),
+    SPECIES_TO_NATIONAL(TYPURR),
+    SPECIES_TO_NATIONAL(CALIKEY),
+    SPECIES_TO_NATIONAL(SPOOKIDS),
+    SPECIES_TO_NATIONAL(TOGETERROR),
+    SPECIES_TO_NATIONAL(CNIDETER),
+    SPECIES_TO_NATIONAL(TIDARIA),
+    SPECIES_TO_NATIONAL(ARGIGAMI),
+    SPECIES_TO_NATIONAL(DISPUTRAW),
+    SPECIES_TO_NATIONAL(SPIRICK),
+    SPECIES_TO_NATIONAL(PLAGHOST),
+    SPECIES_TO_NATIONAL(COVILED),
     SPECIES_TO_NATIONAL(ODDISH),
     SPECIES_TO_NATIONAL(GLOOM),
     SPECIES_TO_NATIONAL(VILEPLUME),
-    SPECIES_TO_NATIONAL(PARAS),
-    SPECIES_TO_NATIONAL(PARASECT),
-    SPECIES_TO_NATIONAL(VENONAT),
-    SPECIES_TO_NATIONAL(VENOMOTH),
-    SPECIES_TO_NATIONAL(DIGLETT),
+    SPECIES_TO_NATIONAL(CURSWORM),
+    SPECIES_TO_NATIONAL(WINDOWORM),
+    SPECIES_TO_NATIONAL(ARTIFISHAL),
+    SPECIES_TO_NATIONAL(BINYOTAKE),
+    SPECIES_TO_NATIONAL(SVAMPELETT),
     SPECIES_TO_NATIONAL(DUGTRIO),
-    SPECIES_TO_NATIONAL(MEOWTH),
-    SPECIES_TO_NATIONAL(PERSIAN),
-    SPECIES_TO_NATIONAL(PSYDUCK),
-    SPECIES_TO_NATIONAL(GOLDUCK),
-    SPECIES_TO_NATIONAL(MANKEY),
-    SPECIES_TO_NATIONAL(PRIMEAPE),
-    SPECIES_TO_NATIONAL(GROWLITHE),
-    SPECIES_TO_NATIONAL(ARCANINE),
-    SPECIES_TO_NATIONAL(POLIWAG),
-    SPECIES_TO_NATIONAL(POLIWHIRL),
-    SPECIES_TO_NATIONAL(POLIWRATH),
-    SPECIES_TO_NATIONAL(ABRA),
-    SPECIES_TO_NATIONAL(KADABRA),
-    SPECIES_TO_NATIONAL(ALAKAZAM),
-    SPECIES_TO_NATIONAL(MACHOP),
-    SPECIES_TO_NATIONAL(MACHOKE),
-    SPECIES_TO_NATIONAL(MACHAMP),
-    SPECIES_TO_NATIONAL(BELLSPROUT),
-    SPECIES_TO_NATIONAL(WEEPINBELL),
-    SPECIES_TO_NATIONAL(VICTREEBEL),
-    SPECIES_TO_NATIONAL(TENTACOOL),
-    SPECIES_TO_NATIONAL(TENTACRUEL),
-    SPECIES_TO_NATIONAL(GEODUDE),
-    SPECIES_TO_NATIONAL(GRAVELER),
-    SPECIES_TO_NATIONAL(GOLEM),
-    SPECIES_TO_NATIONAL(PONYTA),
-    SPECIES_TO_NATIONAL(RAPIDASH),
-    SPECIES_TO_NATIONAL(SLOWPOKE),
-    SPECIES_TO_NATIONAL(SLOWBRO),
-    SPECIES_TO_NATIONAL(MAGNEMITE),
-    SPECIES_TO_NATIONAL(MAGNETON),
-    SPECIES_TO_NATIONAL(FARFETCHD),
-    SPECIES_TO_NATIONAL(DODUO),
-    SPECIES_TO_NATIONAL(DODRIO),
-    SPECIES_TO_NATIONAL(SEEL),
-    SPECIES_TO_NATIONAL(DEWGONG),
-    SPECIES_TO_NATIONAL(GRIMER),
-    SPECIES_TO_NATIONAL(MUK),
-    SPECIES_TO_NATIONAL(SHELLDER),
-    SPECIES_TO_NATIONAL(CLOYSTER),
-    SPECIES_TO_NATIONAL(GASTLY),
-    SPECIES_TO_NATIONAL(HAUNTER),
-    SPECIES_TO_NATIONAL(GENGAR),
-    SPECIES_TO_NATIONAL(ONIX),
-    SPECIES_TO_NATIONAL(DROWZEE),
-    SPECIES_TO_NATIONAL(HYPNO),
-    SPECIES_TO_NATIONAL(KRABBY),
-    SPECIES_TO_NATIONAL(KINGLER),
-    SPECIES_TO_NATIONAL(VOLTORB),
-    SPECIES_TO_NATIONAL(ELECTRODE),
-    SPECIES_TO_NATIONAL(EXEGGCUTE),
-    SPECIES_TO_NATIONAL(EXEGGUTOR),
-    SPECIES_TO_NATIONAL(CUBONE),
+    SPECIES_TO_NATIONAL(SEAGIRL),
+    SPECIES_TO_NATIONAL(DOOMERMAID),
+    SPECIES_TO_NATIONAL(BONGSAI),
+    SPECIES_TO_NATIONAL(REEFIR),
+    SPECIES_TO_NATIONAL(RANDOMAIL),
+    SPECIES_TO_NATIONAL(DEDLIVERY),
+    SPECIES_TO_NATIONAL(SKELIPEDE),
+    SPECIES_TO_NATIONAL(COFFINSECT),
+    SPECIES_TO_NATIONAL(TERRACAL),
+    SPECIES_TO_NATIONAL(DIGFLOPPA),
+    SPECIES_TO_NATIONAL(SIXTEEVY),
+    SPECIES_TO_NATIONAL(TENEIDEEPI),
+    SPECIES_TO_NATIONAL(FOREKAYE),
+    SPECIES_TO_NATIONAL(MLADIBUG),
+    SPECIES_TO_NATIONAL(FLEXNAKE),
+    SPECIES_TO_NATIONAL(FLEXAIL),
+    SPECIES_TO_NATIONAL(ETIKUB),
+    SPECIES_TO_NATIONAL(DESMANTHER),
+    SPECIES_TO_NATIONAL(SUPPORPOD),
+    SPECIES_TO_NATIONAL(FLYPOD),
+    SPECIES_TO_NATIONAL(VEESEE),
+    SPECIES_TO_NATIONAL(DRACORD),
+    SPECIES_TO_NATIONAL(DONKRIME),
+    SPECIES_TO_NATIONAL(MAFIADASS),
+    SPECIES_TO_NATIONAL(MLGLOB),
+    SPECIES_TO_NATIONAL(BRAIMATE),
+    SPECIES_TO_NATIONAL(CREWEBRAL),
+    SPECIES_TO_NATIONAL(IMPVADER),
+    SPECIES_TO_NATIONAL(EXTERESSUS),
+    SPECIES_TO_NATIONAL(ALSNOW),
+    SPECIES_TO_NATIONAL(COOLLEM),
+    SPECIES_TO_NATIONAL(DARKORPSE),
+    SPECIES_TO_NATIONAL(FUNNESUS),
+    SPECIES_TO_NATIONAL(PUPYRO),
+    SPECIES_TO_NATIONAL(PYRULPES),
+    SPECIES_TO_NATIONAL(KITSINICAL),
+    SPECIES_TO_NATIONAL(COMMUNYMPH),
+    SPECIES_TO_NATIONAL(MANTIFA),
+    SPECIES_TO_NATIONAL(HATCHAAL),
+    SPECIES_TO_NATIONAL(CRUSYGLE),
+    SPECIES_TO_NATIONAL(BUBBABE),
+    SPECIES_TO_NATIONAL(BUBBATH),
+    SPECIES_TO_NATIONAL(BUBBLUST),
+    SPECIES_TO_NATIONAL(CHANELING),
+    SPECIES_TO_NATIONAL(TROLLMODEL),
+    SPECIES_TO_NATIONAL(SKORCHOP),
+    SPECIES_TO_NATIONAL(CUBEAST),
+    SPECIES_TO_NATIONAL(BEASTUNT),
+    SPECIES_TO_NATIONAL(HOOTUBE),
+    SPECIES_TO_NATIONAL(CHANNOWL),
+    SPECIES_TO_NATIONAL(BROYALTY),
+    SPECIES_TO_NATIONAL(FANDAM),
     SPECIES_TO_NATIONAL(MAROWAK),
     SPECIES_TO_NATIONAL(HITMONLEE),
     SPECIES_TO_NATIONAL(HITMONCHAN),
     SPECIES_TO_NATIONAL(LICKITUNG),
     SPECIES_TO_NATIONAL(KOFFING),
-    SPECIES_TO_NATIONAL(WEEZING),
-    SPECIES_TO_NATIONAL(RHYHORN),
-    SPECIES_TO_NATIONAL(RHYDON),
-    SPECIES_TO_NATIONAL(CHANSEY),
-    SPECIES_TO_NATIONAL(TANGELA),
-    SPECIES_TO_NATIONAL(KANGASKHAN),
-    SPECIES_TO_NATIONAL(HORSEA),
-    SPECIES_TO_NATIONAL(SEADRA),
-    SPECIES_TO_NATIONAL(GOLDEEN),
-    SPECIES_TO_NATIONAL(SEAKING),
-    SPECIES_TO_NATIONAL(STARYU),
-    SPECIES_TO_NATIONAL(STARMIE),
-    SPECIES_TO_NATIONAL(MR_MIME),
-    SPECIES_TO_NATIONAL(SCYTHER),
-    SPECIES_TO_NATIONAL(JYNX),
-    SPECIES_TO_NATIONAL(ELECTABUZZ),
-    SPECIES_TO_NATIONAL(MAGMAR),
-    SPECIES_TO_NATIONAL(PINSIR),
-    SPECIES_TO_NATIONAL(TAUROS),
-    SPECIES_TO_NATIONAL(MAGIKARP),
-    SPECIES_TO_NATIONAL(GYARADOS),
-    SPECIES_TO_NATIONAL(LAPRAS),
-    SPECIES_TO_NATIONAL(DITTO),
-    SPECIES_TO_NATIONAL(EEVEE),
-    SPECIES_TO_NATIONAL(VAPOREON),
-    SPECIES_TO_NATIONAL(JOLTEON),
-    SPECIES_TO_NATIONAL(FLAREON),
-    SPECIES_TO_NATIONAL(PORYGON),
-    SPECIES_TO_NATIONAL(OMANYTE),
-    SPECIES_TO_NATIONAL(OMASTAR),
-    SPECIES_TO_NATIONAL(KABUTO),
-    SPECIES_TO_NATIONAL(KABUTOPS),
+    SPECIES_TO_NATIONAL(MUSTELIT),
+    SPECIES_TO_NATIONAL(CAPENSEAR),
+    SPECIES_TO_NATIONAL(MAPIG),
+    SPECIES_TO_NATIONAL(PREDATOAR),
+    SPECIES_TO_NATIONAL(ILLUMARYD),
+    SPECIES_TO_NATIONAL(ENLIMINATI),
+    SPECIES_TO_NATIONAL(ASTLEYROID),
+    SPECIES_TO_NATIONAL(POSTLE),
+    SPECIES_TO_NATIONAL(HUSHBACK),
+    SPECIES_TO_NATIONAL(SLICHIC),
+    SPECIES_TO_NATIONAL(MURDEROO),
+    SPECIES_TO_NATIONAL(ROBBANK),
+    SPECIES_TO_NATIONAL(CORRIMINAL),
+    SPECIES_TO_NATIONAL(VEGAVA),
+    SPECIES_TO_NATIONAL(GLUTTOCADO),
+    SPECIES_TO_NATIONAL(PLAYSTRIKE),
+    SPECIES_TO_NATIONAL(EXBULK),
+    SPECIES_TO_NATIONAL(TOUCHSPEED),
+    SPECIES_TO_NATIONAL(ZOUNO),
+    SPECIES_TO_NATIONAL(PHANESIS),
+    SPECIES_TO_NATIONAL(BIOSSIL),
+    SPECIES_TO_NATIONAL(VIRANCIENT),
+    SPECIES_TO_NATIONAL(EVECHO),
+    SPECIES_TO_NATIONAL(BARSONIST),
+    SPECIES_TO_NATIONAL(CHIPCHUNE),
+    SPECIES_TO_NATIONAL(ORCLASSTRA),
+    SPECIES_TO_NATIONAL(RELAQUA),
+    SPECIES_TO_NATIONAL(SQUEANIME),
+    SPECIES_TO_NATIONAL(ENIGMASH),
+    SPECIES_TO_NATIONAL(AIRPODON),
+    SPECIES_TO_NATIONAL(MIKOMODO),
+    SPECIES_TO_NATIONAL(GOJIREC),
+    SPECIES_TO_NATIONAL(EEKORONE),
     SPECIES_TO_NATIONAL(AERODACTYL),
     SPECIES_TO_NATIONAL(SNORLAX),
     SPECIES_TO_NATIONAL(ARTICUNO),
@@ -1582,6 +1584,7 @@ const u16 gSpeciesToNationalPokedexNum[NUM_SPECIES] = // Assigns all species to 
     // Calyrex
     [SPECIES_CALYREX_ICE_RIDER - 1] = NATIONAL_DEX_CALYREX,
     [SPECIES_CALYREX_SHADOW_RIDER - 1] = NATIONAL_DEX_CALYREX,
+    [SPECIES_DISPUTRAW_SPECIAL - 1] = NATIONAL_DEX_DISPUTRAW,
 };
 
 const u16 gHoennToNationalOrder[HOENN_DEX_COUNT] = // Assigns Hoenn Dex Pokémon (Using National Dex Index)
@@ -1859,31 +1862,31 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_PRIMATIO - 1] = 0x52,
     [SPECIES_OPINIMP - 1] = 0x25,
     [SPECIES_TEMPERILLA - 1] = 0x10,
-    [SPECIES_SQUIRTLE - 1] = 0x0b,
-    [SPECIES_WARTORTLE - 1] = 0x13,
-    [SPECIES_BLASTOISE - 1] = 0x19,
-    [SPECIES_CATERPIE - 1] = 0x0b,
-    [SPECIES_METAPOD - 1] = 0x0b,
-    [SPECIES_BUTTERFREE - 1] = 0x1d,
-    [SPECIES_WEEDLE - 1] = 0x46,
-    [SPECIES_KAKUNA - 1] = 0x20,
-    [SPECIES_BEEDRILL - 1] = 0x02,
-    [SPECIES_PIDGEY - 1] = 0x17,
-    [SPECIES_PIDGEOTTO - 1] = 0x17,
-    [SPECIES_PIDGEOT - 1] = 0x29,
-    [SPECIES_RATTATA - 1] = 0x43,
-    [SPECIES_RATICATE - 1] = 0x2b,
-    [SPECIES_SPEAROW - 1] = 0x18,
-    [SPECIES_FEAROW - 1] = 0x2b,
-    [SPECIES_EKANS - 1] = 0x16,
-    [SPECIES_ARBOK - 1] = 0x17,
+    [SPECIES_SUBSTEE - 1] = 0x0b,
+    [SPECIES_MANEMBER - 1] = 0x13,
+    [SPECIES_TRECHIBER - 1] = 0x19,
+    [SPECIES_BULBITE - 1] = 0x0b,
+    [SPECIES_LAMPUPA - 1] = 0x0b,
+    [SPECIES_ELECREEP - 1] = 0x1d,
+    [SPECIES_ACTURUNK - 1] = 0x46,
+    [SPECIES_DRAMASPIRE - 1] = 0x20,
+    [SPECIES_BURROBIT - 1] = 0x02,
+    [SPECIES_BUNNAETHER - 1] = 0x17,
+    [SPECIES_CUCKOOB - 1] = 0x17,
+    [SPECIES_TWIDDIES - 1] = 0x29,
+    [SPECIES_AIRIOLA - 1] = 0x43,
+    [SPECIES_STANDAAD - 1] = 0x2b,
+    [SPECIES_RECKLOAT - 1] = 0x18,
+    [SPECIES_DEVILOAT - 1] = 0x2b,
+    [SPECIES_KITKAR - 1] = 0x16,
+    [SPECIES_CANNEKO - 1] = 0x17,
     [SPECIES_PIKACHU - 1] = 0x2c,
     [SPECIES_RAICHU - 1] = 0x17,
-    [SPECIES_SANDSHREW - 1] = 0x2d,
-    [SPECIES_SANDSLASH - 1] = 0x17,
-    [SPECIES_NIDORAN_F - 1] = 0x00,
-    [SPECIES_NIDORINA - 1] = 0x17,
-    [SPECIES_NIDOQUEEN - 1] = 0x0f,
+    [SPECIES_GRUBFEED - 1] = 0x2d,
+    [SPECIES_KWIZBEE - 1] = 0x17,
+    [SPECIES_COSMONARCH - 1] = 0x00,
+    [SPECIES_PAASTEL - 1] = 0x17,
+    [SPECIES_SHEEPASTRY - 1] = 0x0f,
     [SPECIES_NIDORAN_M - 1] = 0x09,
     [SPECIES_NIDORINO - 1] = 0x13,
     [SPECIES_NIDOKING - 1] = 0x0f,
@@ -1901,23 +1904,23 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_PARAS - 1] = 0x46,
     [SPECIES_PARASECT - 1] = 0x0f,
     [SPECIES_VENONAT - 1] = 0x06,
-    [SPECIES_VENOMOTH - 1] = 0x4b,
-    [SPECIES_DIGLETT - 1] = 0x10,
+    [SPECIES_BINYOTAKE- 1] = 0x06,
+    [SPECIES_SVAMPELETT- 1] = 0x06,
     [SPECIES_DUGTRIO - 1] = 0x4c,
-    [SPECIES_MEOWTH - 1] = 0x52,
-    [SPECIES_PERSIAN - 1] = 0x17,
-    [SPECIES_PSYDUCK - 1] = 0x06,
-    [SPECIES_GOLDUCK - 1] = 0x4c,
-    [SPECIES_MANKEY - 1] = 0x32,
-    [SPECIES_PRIMEAPE - 1] = 0x48,
-    [SPECIES_GROWLITHE - 1] = 0x25,
-    [SPECIES_ARCANINE - 1] = 0x02,
-    [SPECIES_POLIWAG - 1] = 0x00,
-    [SPECIES_POLIWHIRL - 1] = 0x32,
-    [SPECIES_POLIWRATH - 1] = 0x19,
-    [SPECIES_ABRA - 1] = 0x31,
-    [SPECIES_KADABRA - 1] = 0x09,
-    [SPECIES_ALAKAZAM - 1] = 0x17,
+    [SPECIES_SEAGIRL- 1] = 0x06,
+    [SPECIES_DOOMERMAID- 1] = 0x06,
+    [SPECIES_BONGSAI- 1] = 0x06,
+    [SPECIES_REEFIR- 1] = 0x06,
+    [SPECIES_RANDOMAIL- 1] = 0x06,
+    [SPECIES_DEDLIVERY- 1] = 0x06,
+    [SPECIES_SKELIPEDE- 1] = 0x06,
+    [SPECIES_COFFINSECT- 1] = 0x06,
+    [SPECIES_TERRACAL- 1] = 0x06,
+    [SPECIES_DIGFLOPPA- 1] = 0x06,
+    [SPECIES_SIXTEEVY- 1] = 0x06,
+    [SPECIES_TENEIDEEPI- 1] = 0x06,
+    [SPECIES_FOREKAYE- 1] = 0x06,
+    [SPECIES_MLADIBUG- 1] = 0x06,
     [SPECIES_MACHOP - 1] = 0x00,
     [SPECIES_MACHOKE - 1] = 0x10,
     [SPECIES_MACHAMP - 1] = 0x31,
@@ -2986,37 +2989,58 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     else
         personality = Random32();
 
-    //Determine original trainer ID
-    if (otIdType == OT_ID_RANDOM_NO_SHINY) //Pokemon cannot be shiny
+    SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
+
+    switch (otIdType)
     {
-        u32 shinyValue;
-        do
+        case OT_ID_SHINY:
         {
-            value = Random32();
-            shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
-        } while (shinyValue < SHINY_ODDS);
-    }
-    else if (otIdType == OT_ID_PRESET) //Pokemon has a preset OT ID
-    {
-        value = fixedOtId;
-    }
-    else //Player is the OT
-    {
-        value = gSaveBlock2Ptr->playerTrainerId[0]
-              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
-              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
-              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
-        
-        if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
-        {
-            u32 shinyValue;
-            u32 rolls = 0;
+            u32 shinyValue = 0;
             do
             {
-                personality = Random32();
+                value = Random32();
                 shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
-                rolls++;
-            } while (shinyValue >= SHINY_ODDS && rolls < I_SHINY_CHARM_REROLLS);
+            } while (shinyValue >= SHINY_ODDS);
+        }
+        break;
+
+        case OT_ID_RANDOM_NO_SHINY:
+        {
+            u32 shinyValue = 0;
+            do
+            {
+                value = Random32();
+                shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
+            } while (shinyValue < SHINY_ODDS);
+        }
+        break;
+
+        case OT_ID_PRESET:
+        {
+            value = fixedOtId;
+        }
+        break;
+
+        default:
+        {
+            value = gSaveBlock2Ptr->playerTrainerId[0]
+                 | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+                 | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+                 | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+
+#ifdef ITEM_SHINY_CHARM
+            if (CheckBagHasItem(ITEM_SHINY_CHARM, 1))
+            {
+                u32 shinyValue;
+                u32 rolls = 0;
+                do
+                {
+                    personality = Random32();
+                    shinyValue = HIHALF(value) ^ LOHALF(value) ^ HIHALF(personality) ^ LOHALF(personality);
+                    rolls++;
+                } while (shinyValue >= SHINY_ODDS && rolls < I_SHINY_CHARM_REROLLS);
+            }
+#endif
         }
     }
 
@@ -3094,7 +3118,7 @@ void CreateMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV,
     CreateMon(mon, species, level, fixedIV, 1, personality, OT_ID_PLAYER_ID, 0);
 }
 
-void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter)
+void CreateMonWithGenderNatureLetter(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 gender, u8 nature, u8 unownLetter, u8 otIdType)
 {
     u32 personality;
 
@@ -3761,6 +3785,32 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
     }
 
     return retVal;
+}
+
+u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
+{
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u8 level = GetMonData(mon, MON_DATA_LEVEL, NULL);
+
+    // since you can learn more than one move per level
+    // the game needs to know whether you decided to
+    // learn it or keep the old set to avoid asking
+    // you to learn the same move over and over again
+    if (firstMove)
+    {
+        sLearningMoveTableID = 0;
+    }
+    while(gLevelUpLearnsets[species][sLearningMoveTableID].move != LEVEL_UP_END)
+    {
+        while (!gLevelUpLearnsets[species][sLearningMoveTableID].level || gLevelUpLearnsets[species][sLearningMoveTableID].level == level)
+        {
+            gMoveToLearn = gLevelUpLearnsets[species][sLearningMoveTableID].move;
+            sLearningMoveTableID++;
+            return GiveMoveToMon(mon, gMoveToLearn);
+        }
+        sLearningMoveTableID++;
+    }
+    return 0;
 }
 
 void DeleteFirstMoveAndGiveMoveToMon(struct Pokemon *mon, u16 move)
@@ -6184,6 +6234,46 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u
                 if (currentMap == gEvolutionTable[species][i].param)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_HIGH_ATK:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_ATK, 0) > GetMonData(mon, MON_DATA_DEF, 0))
+			        &&(GetMonData(mon, MON_DATA_ATK, 0) > GetMonData(mon, MON_DATA_SPATK, 0))
+			        &&(GetMonData(mon, MON_DATA_ATK, 0) > GetMonData(mon, MON_DATA_SPDEF, 0))
+			        &&(GetMonData(mon, MON_DATA_ATK, 0) > GetMonData(mon, MON_DATA_SPEED, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_HIGH_DEF:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_DEF, 0) > GetMonData(mon, MON_DATA_ATK, 0))
+			        &&(GetMonData(mon, MON_DATA_DEF, 0) > GetMonData(mon, MON_DATA_SPATK, 0))
+			        &&(GetMonData(mon, MON_DATA_DEF, 0) > GetMonData(mon, MON_DATA_SPDEF, 0))
+			        &&(GetMonData(mon, MON_DATA_DEF, 0) > GetMonData(mon, MON_DATA_SPEED, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_HIGH_SPATK:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_SPATK, 0) > GetMonData(mon, MON_DATA_ATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPATK, 0) > GetMonData(mon, MON_DATA_DEF, 0))
+			        &&(GetMonData(mon, MON_DATA_SPATK, 0) > GetMonData(mon, MON_DATA_SPDEF, 0))
+			        &&(GetMonData(mon, MON_DATA_SPATK, 0) > GetMonData(mon, MON_DATA_SPEED, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_HIGH_SPDEF:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_SPDEF, 0) > GetMonData(mon, MON_DATA_ATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPDEF, 0) > GetMonData(mon, MON_DATA_DEF, 0))
+			        &&(GetMonData(mon, MON_DATA_SPDEF, 0) > GetMonData(mon, MON_DATA_SPATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPDEF, 0) > GetMonData(mon, MON_DATA_SPEED, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_HIGH_SPEED:
+                if (gEvolutionTable[species][i].param <= level)
+                    if ((GetMonData(mon, MON_DATA_SPEED, 0) > GetMonData(mon, MON_DATA_ATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPEED, 0) > GetMonData(mon, MON_DATA_DEF, 0))
+			        &&(GetMonData(mon, MON_DATA_SPEED, 0) > GetMonData(mon, MON_DATA_SPATK, 0))
+			        &&(GetMonData(mon, MON_DATA_SPEED, 0) > GetMonData(mon, MON_DATA_SPDEF, 0)))
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;        
             }
         }
         break;

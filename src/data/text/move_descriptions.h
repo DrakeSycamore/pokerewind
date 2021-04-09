@@ -2942,8 +2942,178 @@ static const u8 sEERIE_SPELLDescription[] = _(
     "Attacks with psychic power.\n"
     "Foe's last move has 3 PP cut.");
 
+static const u8 sMOVE_BIG_DEBATEDescription[] = _(
+    "Roasts target in debate.\n"
+    "Has a chance to Burn.");
+
+static const u8 sMOVE_LEGION_BASHDescription[] = _(
+    "Summons subscribers to\n"
+    "hit 3x with rising power.");
+
+static const u8 sMOVE_MOB_MENTALITYDescription[] = _(
+    "A Fire/Ice dislike bomb.\n"
+    "Hits fast, clears stat gains.");
+
+static const u8 sMOVE_MIC_DROPDescription[] = _(
+    "Passes the mic with flair,\n"
+    "switching after burning.");
+
+static const u8 sMOVE_SNAPDescription[] = _(
+    "You should've gone for the\n"
+    "head. a 50% OHKO on foes.");
+
+static const u8 sMOVE_MORDANT_ACIDDescription[] = _(
+    "May badly poison. Super\n"
+    "Effective against Steel.");
+
+static const u8 sMOVE_BEAR_HUGDescription[] = _(
+    "Hugs the foe.\n"
+    "not in use");
+
+static const u8 sMOVE_LENS_FLAREDescription[] = _(
+    "Hits first if foe attacks.\n"
+    "Bottom Text");
+
+static const u8 sMOVE_JUSTICE_HAMMERDescription[] = _(
+    "Drops a hammer. Hits,\n"
+    " starting Electric Terrain.");
+
+static const u8 sMOVE_GENTLE_RAINDescription[] = _(
+    "A nurturing rain strikes.\n"
+    "Starts Grassy Terrain.");
+
+static const u8 sMOVE_LEAD_CANNONDescription[] = _(
+    "A bullet blast bursts on \n"
+    "adjacent foes.");
+
+static const u8 sMOVE_PSYCH_OUTDescription[] = _(
+    "Surprises the foe by \n"
+    "ambushing with queries.");
+
+static const u8 sMOVE_PANIC_SWEATDescription[] = _(
+    "Raises defenses above 1/2 \n"
+    "HP. Raises speed below.");
+
+static const u8 sMOVE_PIXIE_PETALDescription[] = _(
+    "Petals perfume the foe,\n"
+    "starting Misty Terrain.");
+
+
+
+
+
+
+static const u8 sMOVE_MIND_PIECEDescription[] = _(
+    "Sprays with psychedelics,\n"
+    "starting Psychic Terrain.");
+
+static const u8 sMOVE_DIVEBOMBDescription[] = _(
+    "Raises speed the first turn, \n"
+    "then strikes the next.");
+
+static const u8 sMOVE_REWINDDescription[] = _(
+    "Drags foe back through\n"
+    "time, reversing stat changes.");
+
+static const u8 sMOVE_MENTAL_STRIKEDescription[] = _(
+    "Strikes the foe intelligently, \n"
+    "damaging on Sp. Def.");
+
+static const u8 sMOVE_NARUTO_RUNDescription[] = _(
+    "It's faster to run this way.\n"
+    "Ups Speed and Accuracy.");
+
+static const u8 sMOVE_LEEK_SPINDescription[] = _(
+    "A weeb dance with a high\n"
+    "chance to raise Sp. Atk.");
+
+static const u8 sMOVE_DOUBLE_CLICKDescription[] = _(
+    "Selects the foe with a \n"
+    "double click. Hits twice.");
+
+static const u8 sMOVE_BLUE_SCREENDescription[] = _(
+    "A critical error cuts HP\n"
+    "by 1/2. Sets dual screens.");
+
+static const u8 sMOVE_SPIN_DASHDescription[] = _(
+    "Steps it up, using Speed in\n"
+    "place of the user's Attack.");
+
+static const u8 sMOVE_SYNTH_WAVEDescription[] = _(
+    "Three electrosynth shocks\n"
+    "strike first. Rising power.");
+
+static const u8 sMOVE_ENVELOPDescription[] = _(
+    "Envelops the foe, using\n"
+    "Sp.Def, not Sp.Atk.");
+
+static const u8 sMOVE_ASSASSINATEDescription[] = _(
+    "Super-effective hits deal\n"
+    "3x rather than 2x.");
+
+
+static const u8 sMOVE_VENT_KILLDescription[] = _(
+    "Crushes the foe, then \n"
+    " switches out via a vent.");
+
+static const u8 sMOVE_EJECTDescription[] = _(
+    "Hurls the foe out. Super\n"
+    "Effective against Dark.");
+
+static const u8 sMOVE_GUNDescription[] = _(
+    "Pulls a fucking gat on the foe\n"
+    "killing it instantly.");
+
+static const u8 sMOVE_TOXIC_ATTITUDEDescription[] = _(
+    "If user is under 50% HP, \n"
+    "gets salty and poisons.");
+
+static const u8 sMOVE_HIVE_MINDDescription[] = _(
+    "If the user has status, the\n"
+    "target gains that status.");
+
+static const u8 sMOVE_TSUNAMIDescription[] = _(
+    "Summons a tidal wave\n"
+    "that washes foes away.");
+
+static const u8 sMOVE_SANDBLASTERDescription[] = _(
+    "A blistering blast of sand.\n"
+    "1.5x power in sandstorm.");
+
+static const u8 sMOVE_FREEZE_FRAMEDescription[] = _(
+    "An icy chill hits foes first.\n"
+    "Doesn't reduce below 1HP.");
+
+static const u8 sMOVE_EROSION_RAYDescription[] = _(
+    "Erodes itself, losing 1/2\n"
+    "HP into a blasting ray");
+
+static const u8 sMOVE_BROKEN_ARIADescription[] = _(
+    "Heart-rending song that,\n"
+    "hurts user and may sleep.");
+
+static const u8 sMOVE_MOPDescription[] = _(
+    "Clears hazards, slows,\n"
+    "moves first in rain.");
+
+static const u8 sMOVE_GAMER_RAGEDescription[] = _(
+    "Hits twice if tilted\n"
+    "- at under half HP.");
+
+static const u8 sMOVE_MOOD_CRUSHDescription[] = _(
+    "A crippling depression\n"
+    "makes target Defeatist.");
+
+static const u8 sMOVE_POWER_PROCDescription[] = _(
+    "Hits itself to activate\n"
+    "its own abilities.");
+
+
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
+
+
+
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
@@ -3704,4 +3874,51 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_GLACIAL_LANCE - 1] = sGLACIAL_LANCEDescription,
     [MOVE_ASTRAL_BARRAGE - 1] = sASTRAL_BARRAGEDescription,
     [MOVE_EERIE_SPELL - 1] = sEERIE_SPELLDescription,
+    [MOVE_BIG_DEBATE - 1] = sMOVE_BIG_DEBATEDescription,
+    [MOVE_LEGION_BASH - 1] = sMOVE_LEGION_BASHDescription,
+    [MOVE_MOB_MENTALITY - 1] = sMOVE_MOB_MENTALITYDescription,
+    [MOVE_MIC_DROP - 1] = sMOVE_MIC_DROPDescription,
+    [MOVE_SNAP - 1] = sMOVE_SNAPDescription,
+    [MOVE_MORDANT_ACID - 1] = sMOVE_MORDANT_ACIDDescription,
+    [MOVE_BEAR_HUG - 1] = sMOVE_BEAR_HUGDescription,
+    [MOVE_LENS_FLARE - 1] = sMOVE_LENS_FLAREDescription,
+    [MOVE_JUSTICE_HAMMER - 1] = sMOVE_JUSTICE_HAMMERDescription,
+    [MOVE_GENTLE_RAIN - 1] = sMOVE_GENTLE_RAINDescription,
+    [MOVE_LEAD_CANNON - 1] = sMOVE_LEAD_CANNONDescription,
+    [MOVE_PSYCH_OUT - 1] = sMOVE_PSYCH_OUTDescription,
+    [MOVE_PANIC_SWEAT - 1] = sMOVE_PANIC_SWEATDescription,
+    [MOVE_PIXIE_PETAL - 1] = sMOVE_PIXIE_PETALDescription,
+
+
+
+
+
+    [MOVE_MIND_PIECE - 1] = sMOVE_MIND_PIECEDescription,
+    [MOVE_DIVEBOMB - 1] = sMOVE_DIVEBOMBDescription,
+    [MOVE_REWIND - 1] = sMOVE_REWINDDescription,
+    [MOVE_MENTAL_STRIKE - 1] = sMOVE_MENTAL_STRIKEDescription,
+    [MOVE_NARUTO_RUN - 1] = sMOVE_NARUTO_RUNDescription,
+    [MOVE_LEEK_SPIN - 1] = sMOVE_LEEK_SPINDescription,
+    [MOVE_DOUBLE_CLICK - 1] = sMOVE_DOUBLE_CLICKDescription,
+    [MOVE_BLUE_SCREEN - 1] = sMOVE_BLUE_SCREENDescription,
+    [MOVE_SPIN_DASH - 1] = sMOVE_SPIN_DASHDescription,
+    [MOVE_SYNTH_WAVE - 1] = sMOVE_SYNTH_WAVEDescription,
+    [MOVE_ENVELOP - 1] = sMOVE_ENVELOPDescription,
+    [MOVE_ASSASSINATE - 1] = sMOVE_ASSASSINATEDescription,
+    [MOVE_FROSTBITE - 1] = sMOVE_ASSASSINATEDescription,
+    [MOVE_VENT_KILL - 1] = sMOVE_VENT_KILLDescription,
+    [MOVE_EJECT - 1] = sMOVE_EJECTDescription,
+    [MOVE_GUN - 1] = sMOVE_GUNDescription,
+    [MOVE_TOXIC_ATTITUDE - 1] = sMOVE_TOXIC_ATTITUDEDescription,
+    [MOVE_HIVE_MIND - 1] = sMOVE_HIVE_MINDDescription,
+    [MOVE_TSUNAMI - 1] = sMOVE_TSUNAMIDescription,
+    [MOVE_SANDBLASTER - 1] = sMOVE_SANDBLASTERDescription,
+    [MOVE_FREEZE_FRAME - 1] = sMOVE_FREEZE_FRAMEDescription,
+    [MOVE_EROSION_RAY - 1] = sMOVE_EROSION_RAYDescription,
+    [MOVE_BROKEN_ARIA - 1] = sMOVE_BROKEN_ARIADescription,
+    [MOVE_MOP - 1] = sMOVE_MOPDescription,
+    [MOVE_GAMER_RAGE - 1] = sMOVE_GAMER_RAGEDescription,
+    [MOVE_MOOD_CRUSH - 1] = sMOVE_MOOD_CRUSHDescription,
+    [MOVE_POWER_PROC - 1] = sMOVE_POWER_PROCDescription,
+
 };

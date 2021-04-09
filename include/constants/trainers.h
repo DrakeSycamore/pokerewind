@@ -110,6 +110,8 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
+#define TRAINER_PIC_ANNOYING_ORANGE       93
+#define TRAINER_PIC_LEADER_CHARLIE        94
 
 #define TRAINER_BACK_PIC_BRENDAN                0
 #define TRAINER_BACK_PIC_MAY                    1
@@ -369,10 +371,6 @@
 
 #define F_TRAINER_FEMALE (1 << 7)
 
-// All trainer parties specify the IV, level, and species for each Pokémon in the
-// party. Some trainer parties also specify held items and custom moves for each
-// Pokémon.
-#define F_TRAINER_PARTY_CUSTOM_MOVESET (1 << 0)
-#define F_TRAINER_PARTY_HELD_ITEM      (1 << 1)
+#define TRAINER_IV_MODIFIER       0
 
 #endif  // GUARD_TRAINERS_H

@@ -660,7 +660,6 @@ u8 BattleSetup_GetTerrainId(void)
         return BATTLE_TERRAIN_LONG_GRASS;
     if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
         return BATTLE_TERRAIN_SAND;
-
     switch (gMapHeader.mapType)
     {
     case MAP_TYPE_TOWN:
@@ -669,13 +668,29 @@ u8 BattleSetup_GetTerrainId(void)
         break;
     case MAP_TYPE_UNDERGROUND:
         if (MetatileBehavior_IsIndoorEncounter(tileBehavior))
-            return BATTLE_TERRAIN_BUILDING;
+        {
+            if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB)) //if (MetatileBehavior_IsLab(tileBehavior))
+            {
+                return BATTLE_TERRAIN_LAB;
+            }
+            else
+            {
+                return BATTLE_TERRAIN_BUILDING;
+            }
+        }
         if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
             return BATTLE_TERRAIN_POND;
         return BATTLE_TERRAIN_CAVE;
     case MAP_TYPE_INDOOR:
     case MAP_TYPE_SECRET_BASE:
-        return BATTLE_TERRAIN_BUILDING;
+        if (MetatileBehavior_IsLab(tileBehavior))
+        {
+            return BATTLE_TERRAIN_LAB;
+        }
+        else
+        {
+            return BATTLE_TERRAIN_BUILDING;
+        }
     case MAP_TYPE_UNDERWATER:
         return BATTLE_TERRAIN_UNDERWATER;
     case MAP_TYPE_OCEAN_ROUTE:
@@ -749,51 +764,21 @@ static u16 GetSumOfPlayerPartyLevel(u8 numMons)
 
 static u8 GetSumOfEnemyPartyLevel(u16 opponentId, u8 numMons)
 {
+    const struct TrainerMon *party;
     u8 i;
     u8 sum;
     u32 count = numMons;
+
+    party = gTrainers[opponentId].party.TrainerMon;
 
     if (gTrainers[opponentId].partySize < count)
         count = gTrainers[opponentId].partySize;
 
     sum = 0;
 
-    switch (gTrainers[opponentId].partyFlags)
-    {
-    case 0:
-        {
-            const struct TrainerMonNoItemDefaultMoves *party;
-            party = gTrainers[opponentId].party.NoItemDefaultMoves;
-            for (i = 0; i < count; i++)
-                sum += party[i].lvl;
-        }
-        break;
-    case F_TRAINER_PARTY_CUSTOM_MOVESET:
-        {
-            const struct TrainerMonNoItemCustomMoves *party;
-            party = gTrainers[opponentId].party.NoItemCustomMoves;
-            for (i = 0; i < count; i++)
-                sum += party[i].lvl;
-        }
-        break;
-    case F_TRAINER_PARTY_HELD_ITEM:
-        {
-            const struct TrainerMonItemDefaultMoves *party;
-            party = gTrainers[opponentId].party.ItemDefaultMoves;
-            for (i = 0; i < count; i++)
-                sum += party[i].lvl;
-        }
-        break;
-    case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
-        {
-            const struct TrainerMonItemCustomMoves *party;
-            party = gTrainers[opponentId].party.ItemCustomMoves;
-            for (i = 0; i < count; i++)
-                sum += party[i].lvl;
-        }
-        break;
-    }
-
+    for (i = 0; i < count; i++)
+        sum += party[i].lvl;
+    
     return sum;
 }
 

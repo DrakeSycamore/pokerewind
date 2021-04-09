@@ -592,8 +592,8 @@ static const u8 sText_BadDreamsDmg[] = _("{B_DEF_NAME_WITH_PREFIX} is tormented\
 static const u8 sText_MoldBreakerEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} breaks the mold!");
 static const u8 sText_TeravoltEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is radiating \na bursting aura!");
 static const u8 sText_TurboblazeEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is radiating\na blazing aura!");
-static const u8 sText_SlowStartEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} can't get it going!");
-static const u8 sText_SlowStartEnd[] = _("{B_ATK_NAME_WITH_PREFIX} finally got\nits act together!");
+static const u8 sText_SlowStartEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} has to gather \nInfinity Stones!");
+static const u8 sText_SlowStartEnd[] = _("{B_ATK_NAME_WITH_PREFIX} is inevitable!");
 static const u8 sText_SolarPowerHpDrop[] = _("The {B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\ntakes its toll!");
 static const u8 sText_AftermathDmg[] = _("{B_ATK_NAME_WITH_PREFIX} is hurt!");
 static const u8 sText_AnticipationActivates[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} shuddered\nin anticipation!");
@@ -695,6 +695,11 @@ static const u8 sText_PkmnsWillPerishIn3Turns[] = _("Both Pokémon will perish\n
 static const u8 sText_AbilityRaisedStatDrastically[] = _("{B_DEF_ABILITY} raised {B_DEF_NAME_WITH_PREFIX}'s\n{B_BUFF1} drastically!");
 static const u8 sText_AsOneEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} has two Abilities!");
 static const u8 sText_CuriousMedicineEnters[] = _("{B_EFF_NAME_WITH_PREFIX}'s\nstat changes were reset!");
+static const u8 sText_BattlerAbilityRaisedStatDrastically[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\n drastically raised its {B_BUFF1}!");
+static const u8 sText_NoFucksEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nreset {B_EFF_NAME_WITH_PREFIX}'s stat changes!");
+static const u8 sText_OppositeDayEnters[] = _("The type chart was inverted!");
+
+
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1253,6 +1258,11 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_SCREENCLEANERENTERS - 12] = sText_ScreenCleanerActivates,
     [STRINGID_PLAYERLOSTTOENEMYTRAINER - 12] = sText_PlayerLostToEnemyTrainer,
     [STRINGID_PLAYERPAIDPRIZEMONEY - 12] = sText_PlayerPaidPrizeMoney,
+    [STRINGID_BATTLERABILITYRAISEDSTATDRASTICALLY - 12] = sText_BattlerAbilityRaisedStatDrastically,
+    [STRINGID_NOFUCKSENTERS - 12] = sText_NoFucksEnters,
+    [STRINGID_OPPOSITEDAYENTERS - 12] = sText_OppositeDayEnters,
+
+
 };
 
 const u16 gTerrainStringIds[] =
@@ -1297,6 +1307,7 @@ const u16 gSwitchInAbilityStringIds[] =
     [MULTI_SWITCHIN_SCREENCLEANER] = STRINGID_SCREENCLEANERENTERS,
     [MULTI_SWITCHIN_ASONE] = STRINGID_ASONEENTERS,
     [MULTI_SWITCHIN_CURIOUS_MEDICINE] = STRINGID_CURIOUSMEDICINEENTERS,
+    [MULTI_SWITCHIN_OPPOSITE_DAY] = STRINGID_OPPOSITEDAYENTERS
 };
 
 const u16 gMissStringIds[] =

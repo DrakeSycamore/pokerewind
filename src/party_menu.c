@@ -404,6 +404,7 @@ static bool8 SetUpFieldMove_Surf(void);
 static bool8 SetUpFieldMove_Fly(void);
 static bool8 SetUpFieldMove_Waterfall(void);
 static bool8 SetUpFieldMove_Dive(void);
+static bool8 SetUpFieldMove_Rewind(void);
 
 // static const data
 #include "data/pokemon/tutor_learnsets.h"
@@ -2260,8 +2261,8 @@ static void DisplayPartyPokemonGender(u8 gender, u16 species, u8 *nickname, stru
 
     if (species == SPECIES_NONE)
         return;
-    if ((species == SPECIES_NIDORAN_M || species == SPECIES_NIDORAN_F) && StringCompare(nickname, gSpeciesNames[species]) == 0)
-        return;
+    /*if ((species == SPECIES_NIDORAN_M || species == SPECIES_NIDORAN_F) && StringCompare(nickname, gSpeciesNames[species]) == 0)
+        return;*/
     switch (gender)
     {
     case MON_MALE:
@@ -3845,6 +3846,25 @@ static bool8 SetUpFieldMove_Dive(void)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Dive;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+
+static void FieldCallback_Rewind(void)
+{
+    gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    FieldEffectStart(FLDEFF_USE_REWIND);
+}
+
+static bool8 SetUpFieldMove_Rewind(void)
+{
+    gFieldEffectArguments[1] = TrySetRewindWarp();
+    if (gFieldEffectArguments[1] != 0)
+    {
+        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+        gPostMenuFieldCallback = FieldCallback_Rewind;
         return TRUE;
     }
     return FALSE;

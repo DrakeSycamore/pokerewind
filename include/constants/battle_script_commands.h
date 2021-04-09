@@ -170,6 +170,11 @@
 #define VARIOUS_DESTROY_ABILITY_POPUP           102
 #define VARIOUS_TOTEM_BOOST                     103
 #define VARIOUS_TRY_ACTIVATE_GRIM_NEIGH         104
+#define VARIOUS_JUMP_IF_OVER_HALF_HP		105
+#define VARIOUS_RESET_TIMERS			106
+#define VARIOUS_SET_MOOD_CRUSH                  107
+
+
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0
