@@ -3414,6 +3414,45 @@ bool8 HasNoMonsToSwitch(u8 battler, u8 partyIdBattlerOn1, u8 partyIdBattlerOn2)
     }
 }
 
+u8 TryTerrainFormChange(u8 battler)
+{
+    u8 ret = 0;
+
+    if (gBattleMons[battler].species == SPECIES_CASTFORM || gBattleMons[battler].ability == ABILITY_MIMICRY)
+    {
+        if (gBattleMons[battler].ability != (ABILITY_THEORYCRAFT | ABILITY_MIMICRY) || gBattleMons[battler].hp == 0)
+        {
+            ret = 0;
+        }
+        else if (!(gFieldStatuses & STATUS_TERRAIN_ANY) && !IS_BATTLER_OF_TYPE(battler, TYPE_NORMAL))
+        {
+            SET_BATTLER_TYPE(battler, TYPE_NORMAL);
+            ret = 1;
+        }
+        else if (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN && !IS_BATTLER_OF_TYPE(battler, TYPE_ELECTRIC))
+        {
+            SET_BATTLER_TYPE(battler, TYPE_ELECTRIC);
+            ret = 2;
+        }
+        else if gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN && !IS_BATTLER_OF_TYPE(battler, TYPE_PSYCHIC))
+        {
+            SET_BATTLER_TYPE(battler, TYPE_PSYCHIC);
+            ret = 3;
+        }
+        else if (gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN && !IS_BATTLER_OF_TYPE(battler, TYPE_GRASS))
+        {
+            SET_BATTLER_TYPE(battler, TYPE_GRASS);
+            ret = 4;
+        }
+        else if (gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN && !IS_BATTLER_OF_TYPE(battler, TYPE_FAIRY) && gBattleMons[battler].ability == ABILITY_MIMICRY)
+        {
+            SET_BATTLER_TYPE(battler, TYPE_FAIRY);
+            ret = 5;
+        }
+    }
+    return ret;
+}
+
 u8 TryWeatherFormChange(u8 battler)
 {
     u8 ret = 0;
@@ -4023,6 +4062,23 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             {
                 BattleScriptPushCursorAndCallback(BattleScript_CastformChange);
                 *(&gBattleStruct->formToChangeInto) = effect - 1;
+            }
+            break;
+        case ABILITY_THEORYCRAFT:
+            effect = TryTerrainFormChange(battler);
+            if (effect != 0)
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_CastformChange);
+                *(&gBattleStruct->formToChangeInto) = effect - 1;
+            }
+            break;
+        case ABILITY_MIMICRY:
+            effect = TryTerrainFormChange(battler);
+            if (effect != 0)
+            {
+                PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
+                gBattlerAbility = gBattlerAttacker;
+                BattleScriptPushCursorAndCallback(BattleScript_ProteanActivates);
             }
             break;
         case ABILITY_TRACE:

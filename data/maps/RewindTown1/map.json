@@ -62,11 +62,10 @@
     {
       "type": "sign",
       "x": 18,
-      "y": 5,
+      "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_EventScript_TownSign",
-      "": ""
+      "script": "LittlerootTown_EventScript_TownSign"
     },
     {
       "type": "sign",
@@ -91,6 +90,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LittlerootTown_EventScript_PlayersHouseSignMale"
+    },
+    {
+      "type": "hidden_item",
+      "x": 25,
+      "y": 0,
+      "elevation": 3,
+      "item": "ITEM_RING_TARGET",
+      "flag": "FLAG_UNUSED_0x264"
     }
   ]
 }
