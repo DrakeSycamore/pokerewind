@@ -39,17 +39,17 @@ LittlerootTown_MaysHouse_1F_OnTransition: @ 81F88F4
 	end
 
 LittlerootTown_MaysHouse_1F_EventScript_MoveMomToStairs:: @ 81F8916
-	setobjectxyperm LOCALID_MOM, 2, 4
+	setobjectxyperm LOCALID_MOM, 2, 6
 	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 
 LittlerootTown_MaysHouse_1F_EventScript_MoveMomToTV:: @ 81F8922
-	setobjectxyperm LOCALID_MOM, 6, 5
+	setobjectxyperm LOCALID_MOM, 6, 7
 	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 
 LittlerootTown_MaysHouse_1F_EventScript_MoveMomToDoor:: @ 81F892E
-	setobjectxyperm LOCALID_MOM, 1, 8
+	setobjectxyperm LOCALID_MOM, 1, 10
 	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 

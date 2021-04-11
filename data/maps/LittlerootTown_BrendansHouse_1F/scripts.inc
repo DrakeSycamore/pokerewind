@@ -39,17 +39,17 @@ LittlerootTown_BrendansHouse_1F_OnTransition: @ 81F77A4
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToStairs:: @ 81F77C6
-	setobjectxyperm LOCALID_MOM, 8, 4
+	setobjectxyperm LOCALID_MOM, 8, 6
 	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToTV:: @ 81F77D2
-	setobjectxyperm LOCALID_MOM, 4, 5
+	setobjectxyperm LOCALID_MOM, 4, 7
 	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 
 LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToDoor:: @ 81F77DE
-	setobjectxyperm LOCALID_MOM, 9, 8
+	setobjectxyperm LOCALID_MOM, 9, 10
 	setobjectmovementtype LOCALID_MOM, MOVEMENT_TYPE_FACE_UP
 	return
 
@@ -389,8 +389,8 @@ PlayersHouse_1F_Text_ReportFromPetalburgGym: @ 81F7EC6
 
 PlayersHouse_1F_Text_TheresAMovieOnTV: @ 81F7F0F
 	.string "There is a movie on TV.\p"
-	.string "Two men are dancing on a big piano\n"
-	.string "keyboard.\p"
+	.string "Two girls are utilising a pink\n"
+	.string "plastic cup.\p"
 	.string "Better get going!$"
 
 PlayersHouse_1F_Text_RunningShoesManual: @ 81F7F66

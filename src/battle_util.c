@@ -4992,7 +4992,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 default:
                     gLastUsedAbility = gBattleMons[gBattlerTarget].ability = ABILITY_KLUTZ;
                     BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_MummyActivates;
+                    gBattlescriptCurrInstr = BattleScript_HeadTraumaActivates;
                     effect++;
                     break;
                 }
@@ -5021,7 +5021,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                 default:
                     gLastUsedAbility = gBattleMons[gBattlerTarget].ability = ABILITY_DEFEATIST;
                     BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_MummyActivates;
+                    gBattlescriptCurrInstr = BattleScript_HeadTraumaActivates;
                     effect++;
                     break;
                 }

@@ -8306,3 +8306,8 @@ BattleScript_Buffoonery::
 	switchineffects BS_ATTACKER
 	goto BattleScript_MoveEnd
 
+BattleScript_HeadTraumaActivates::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PKMNACQUIREDABILITY
+	waitmessage 0x40
+	return
