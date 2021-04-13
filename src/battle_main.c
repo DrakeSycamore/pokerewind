@@ -4334,7 +4334,7 @@ s8 GetMovePriority(u32 battlerId, u16 move)
     {
         priority++;
     }
-    else if (gBattleMoves[move].effect == EFFECT_GRASSY_GLIDE && (gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN))
+    else if (gBattleMoves[move].effect == EFFECT_GRASSY_GLIDE && IsBattlerGrounded(gActiveBattler) && (gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN))
     {
         priority++;
     }
