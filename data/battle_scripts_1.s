@@ -1581,6 +1581,7 @@ BattleScript_EffectPsychicTerrain:
 	printfromtable gTerrainStringIds
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
+	call BattleScript_TerrainFormChanges
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectTopsyTurvy:
@@ -6918,6 +6919,14 @@ BattleScript_WeatherFormChangesLoop::
 	jumpifbytenotequal sBATTLER, gBattlersCount, BattleScript_WeatherFormChangesLoop
 	return
 
+BattleScript_TerrainFormChanges::
+	setbyte sBATTLER, 0x0
+BattleScript_TerrainFormChangesLoop::
+	trycastformdatachange
+	addbyte sBATTLER, 0x1
+	jumpifbytenotequal sBATTLER, gBattlersCount, BattleScript_TerrainFormChangesLoop
+	return
+
 BattleScript_CastformChange::
 	call BattleScript_DoCastformChange
 	end3
@@ -7015,6 +7024,7 @@ BattleScript_ElectricSurgeActivates::
 	printstring STRINGID_TERRAINBECOMESELECTRIC
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
+	call BattleScript_TerrainFormChanges
 	end3
 
 BattleScript_MistySurgeActivates::
@@ -7023,6 +7033,7 @@ BattleScript_MistySurgeActivates::
 	printstring STRINGID_TERRAINBECOMESMISTY
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
+	call BattleScript_TerrainFormChanges
 	end3
 
 BattleScript_GrassySurgeActivates::
@@ -7031,6 +7042,7 @@ BattleScript_GrassySurgeActivates::
 	printstring STRINGID_TERRAINBECOMESGRASSY
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
+	call BattleScript_TerrainFormChanges
 	end3
 
 BattleScript_PsychicSurgeActivates::
@@ -7039,6 +7051,7 @@ BattleScript_PsychicSurgeActivates::
 	printstring STRINGID_TERRAINBECOMESPSYCHIC
 	waitmessage 0x40
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
+	call BattleScript_TerrainFormChanges
 	end3
 
 BattleScript_BadDreamsActivates::
@@ -8000,6 +8013,7 @@ BattleScript_EffectTerrainHit::
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG, NULL
 BattleScript_TryFaintTerrainHit:
 	tryfaintmon BS_TARGET, FALSE, NULL
+	call BattleScript_TerrainFormChanges
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectToxicAttitude::
