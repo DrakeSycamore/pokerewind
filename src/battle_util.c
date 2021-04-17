@@ -1659,6 +1659,7 @@ enum
     ENDTURN_PSYCHIC_TERRAIN,
     ENDTURN_ION_DELUGE,
     ENDTURN_FAIRY_LOCK,
+    ENDTURN_PLUS_BOOST,
     ENDTURN_FIELD_COUNT,
 };
 
@@ -2087,6 +2088,19 @@ u8 DoFieldEndTurnEffects(void)
             }
             gBattleStruct->turnCountersTracker++;
             break;
+        case ENDTURN_PLUS_BOOST:
+            while (gBattleStruct->turnSideTracker < 2)
+            {
+                side = gBattleStruct->turnSideTracker;
+                if (gSideStatuses[side] & SIDE_STATUS_PLUS_BOOST)
+                {
+                    gSideStatuses[side] &= ~SIDE_STATUS_PLUS_BOOST;
+                    effect++;
+                }
+                gBattleStruct->turnSideTracker++;
+                if (effect)
+                    break;
+            }
         case ENDTURN_FIELD_COUNT:
             effect++;
             break;
@@ -4105,6 +4119,21 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             {
                 BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
                 effect++;
+            }
+            break;
+        case ABILITY_PLUS:
+        case ABILITY_MINUS:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gSpecialStatuses[battler].switchInAbilityDone = 1;
+                if gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_PLUS_BOOST
+                {
+                    SET_STATCHANGER(STAT_ATK, 1, FALSE);
+                    BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
+                    SET_STATCHANGER(STAT_SPATK, 1, FALSE);
+                    BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
+                    effect++;
+                }
             }
             break;
         case ABILITY_INTREPID_SWORD:

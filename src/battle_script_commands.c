@@ -11777,6 +11777,10 @@ static void Cmd_switchoutabilities(void)
         BtlController_EmitSetMonData(0, REQUEST_HP_BATTLE, gBitTable[*(gBattleStruct->field_58 + gActiveBattler)], 2, &gBattleMoveDamage);
         MarkBattlerForControllerExec(gActiveBattler);
         break;
+    case ABILITY_PLUS:
+    case ABILITY_MINUS:
+        gSideStatuses[GetBattlerSide(gActiveBattler)] |= SIDE_STATUS_PLUS_BOOST;
+        break;
     }
 
     gBattlescriptCurrInstr += 2;
