@@ -173,7 +173,7 @@
 #define VARIOUS_JUMP_IF_OVER_HALF_HP		105
 #define VARIOUS_RESET_TIMERS			106
 #define VARIOUS_SET_MOOD_CRUSH                  107
-
+#define VARIOUS_JUMP_IF_ONE_HP                  108
 
 
 // Cmd_manipulatedamage

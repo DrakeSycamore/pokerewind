@@ -7110,7 +7110,8 @@ bool32 CanPoisonType(u8 battlerAttacker, u8 battlerTarget)
 {
     return (GetBattlerAbility(battlerAttacker) == ABILITY_CORROSION
             || !(IS_BATTLER_OF_TYPE(battlerTarget, TYPE_POISON)
-                || IS_BATTLER_OF_TYPE(battlerTarget, TYPE_STEEL)));
+                || IS_BATTLER_OF_TYPE(battlerTarget, TYPE_STEEL))
+            || (gBattleMoves[gCurrentMove].effect == EFFECT_MORDANT_ACID && !(IS_BATTLER_OF_TYPE(battlerTarget, TYPE_POISON))));
 }
 
 bool32 CanParalyzeType(u8 battlerAttacker, u8 battlerTarget)
@@ -8531,6 +8532,12 @@ static void Cmd_various(void)
             gBattlescriptCurrInstr += 7;
             break;
         }
+        return;
+    case VARIOUS_JUMP_IF_ONE_HP:
+        if (gBattleMons[gBattlerAttacker].hp ==1)
+             gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
+        else
+             gBattlescriptCurrInstr +=7;
         return;
     }
     gBattlescriptCurrInstr += 3;

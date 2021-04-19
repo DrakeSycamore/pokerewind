@@ -1784,6 +1784,11 @@
 	.4byte \ptr
 	.endm
 
+	.macro jumpifonehp ptr:req
+	various BS_ATTACKER, VARIOUS_JUMP_IF_ONE_HP
+	.4byte \ptr
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7

@@ -365,32 +365,33 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectFairyLock
 	.4byte BattleScript_EffectAllySwitch
 	.4byte BattleScript_EffectSleepHit
-	.4byte BattleScript_EffectBodyPress
-	.4byte BattleScript_EffectSpinDash
-	.4byte BattleScript_EffectMentalStrike
-	.4byte BattleScript_EffectTwoTypedMoveMobMentality
-	.4byte BattleScript_EffectNarutoRun
-	.4byte BattleScript_EffectPanicSweat
-	.4byte BattleScript_EffectMeteorBeam
-	.4byte BattleScript_EffectDivebomb
-	.4byte BattleScript_EffectTerrainHit
-	.4byte BattleScript_EffectMordantAcid
-	.4byte BattleScript_EffectEject
-	.4byte BattleScript_EffectTripleSuperEffective
-	.4byte BattleScript_EffectToxicAttitude
-	.4byte BattleScript_EffectHiveMind
-	.4byte BattleScript_EffectTerrainPulse
-	.4byte BattleScript_EffectBoltBeak
-	.4byte BattleScript_EffectSandblaster
-	.4byte BattleScript_EffectHitResetTimers
-	.4byte BattleScript_EffectMop
+	.4byte BattleScript_EffectBodyPress @uses def/sdef not atk/satk
+	.4byte BattleScript_EffectSpinDash @calcs off speed
+	.4byte BattleScript_EffectMentalStrike @so novel! its a physical psyshock
+	.4byte BattleScript_EffectTwoTypedMoveMobMentality @two typed and resets stat gains
+	.4byte BattleScript_EffectNarutoRun @ups speed, sharply ups acc
+	.4byte BattleScript_EffectPanicSweat @cosmic power over half hp, agi under
+	.4byte BattleScript_EffectMeteorBeam 
+	.4byte BattleScript_EffectDivebomb @ups speed then hits next turn
+	.4byte BattleScript_EffectTerrainHit @ hits and sets terrain
+	.4byte BattleScript_EffectMordantAcid @ SE vs steel
+	.4byte BattleScript_EffectEject @hits, switches, SE vs dark 
+	.4byte BattleScript_EffectTripleSuperEffective @ronseal moment
+	.4byte BattleScript_EffectToxicAttitude @poisons if under half hp
+	.4byte BattleScript_EffectHiveMind @gives foe the user's status
+	.4byte BattleScript_EffectTerrainPulse 
+	.4byte BattleScript_EffectBoltBeak 
+	.4byte BattleScript_EffectSandblaster @1.5x power in sand
+	.4byte BattleScript_EffectHitResetTimers @unused effect
+	.4byte BattleScript_EffectMop @defog but lowers speed and prio in rain
 	.4byte BattleScript_EffectGrassyGlide
-	.4byte BattleScript_EffectFailOverHalfHP
-	.4byte BattleScript_EffectMoodCrush
-	.4byte BattleScript_EffectBlueScreen
-	.4byte BattleScript_EffectVaporWave
-	.4byte BattleScript_EffectMicDrop
-	.4byte BattleScript_EffectPowerProc
+	.4byte BattleScript_EffectFailOverHalfHP @hits twice over half hp or once under it
+	.4byte BattleScript_EffectMoodCrush @hits, foe gets defeatist
+	.4byte BattleScript_EffectBlueScreen @halves hp, sets reflect/lightscreen
+	.4byte BattleScript_EffectVaporWave @sleep self then sleep and heal everyone
+	.4byte BattleScript_EffectMicDrop @burn then switch
+	.4byte BattleScript_EffectPowerProc @hit self 3x, trigger abilities
+	.4byte BattleScript_EffectMoonshot @sleep foe if user at 1hp
 
 
 BattleScript_EffectSleepHit:
@@ -8279,6 +8280,10 @@ BattleScript_ProcEnd::
 	moveendcase MOVEEND_SYNCHRONIZE_TARGET
 	moveendfrom MOVEEND_STATUS_IMMUNITY_ABILITIES
 	end
+
+BattleScript_EffectMoonshot::
+	jumpifonehp BattleScript_EffectSleepHit
+	goto BattleScript_EffectHit
 
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker
