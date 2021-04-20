@@ -4430,6 +4430,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/RewindTown1/border.bin",
       "blockdata_filepath": "data/layouts/RewindTown1/map.bin"
+    },
+    {
+      "id": "LAYOUT_WOODS1",
+      "name": "Woods1_Layout",
+      "width": 36,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Woods1/border.bin",
+      "blockdata_filepath": "data/layouts/Woods1/map.bin"
     }
   ]
 }
