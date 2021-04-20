@@ -6577,6 +6577,12 @@ static void Cmd_setgravity(void)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
+    else if gBattleMons[gBattlerAttacker].ability == ABILITY_PERSISTENT
+    {
+        gFieldStatuses |= STATUS_FIELD_GRAVITY;
+        gFieldTimers.gravityTimer = 10;
+        gBattlescriptCurrInstr += 5;
+    }
     else
     {
         gFieldStatuses |= STATUS_FIELD_GRAVITY;
@@ -8516,7 +8522,7 @@ static void Cmd_various(void)
     case VARIOUS_RESET_TIMERS:
         gWishFutureKnock.weatherDuration = 5;
 	gFieldTimers.mistyTerrainTimer = 5;
-	return; //fucking horrible effect. 
+	return; //fucking horrible effect. Has to check everything individually then set everything it found. Eh.
     case VARIOUS_SET_MOOD_CRUSH:
         switch (gBattleMons[gActiveBattler].ability)
         {
@@ -11528,6 +11534,12 @@ static void HandleRoomMove(u32 statusFlag, u8 *timer, u8 stringId)
         gFieldStatuses &= ~(statusFlag);
         *timer = 0;
         gBattleCommunication[MULTISTRING_CHOOSER] = stringId + 1;
+    }
+    else if gBattleMons[gBattlerAttacker].ability == ABILITY_PERSISTENT
+    {
+        gFieldStatuses |= statusFlag;
+        *timer = 10;
+        gBattleCommunication[MULTISTRING_CHOOSER] = stringId;
     }
     else
     {

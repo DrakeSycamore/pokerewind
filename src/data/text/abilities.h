@@ -274,6 +274,8 @@ static const u8 sLifeLeechDescription[] =    _("Drains life from attacks.");
 static const u8 sGlitterbombDescription[] =  _("Takes 1/4 damage on turn 1");
 static const u8 sOceanMantleDescription[] =  _("Resist Fire/Ice. Water 1.5x.");
 static const u8 sHornyJailDescription[] =    _("Immune to innuendo moves.");
+static const u8 sTheorycraftDescription[] =  _("Changes form in terrain.");
+static const u8 sPersistentDescription[] =   _("Rooms/Gravity last 10 turns.");
 
 const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
 {
@@ -566,6 +568,8 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_GLITTERBOMB] =  _("Glitterbomb"),
     [ABILITY_OCEAN_MANTLE] = _("Ocean Mantle"),
     [ABILITY_HORNY_JAIL] =   _("Horny Jail"),
+    [ABILITY_THEORYCRAFT] =  _("Theorycraft"),
+    [ABILITY_PERSISTENT] =   _("Space Timer"),
 
 };
 
@@ -860,5 +864,6 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT_GEN8] =
     [ABILITY_GLITTERBOMB] =  sGlitterbombDescription,
     [ABILITY_OCEAN_MANTLE] =  sOceanMantleDescription,
     [ABILITY_HORNY_JAIL] =  sHornyJailDescription,
-
+    [ABILITY_THEORYCRAFT] =  sTheorycraftDescription,
+    [ABILITY_PERSISTENT] =  sPersistentDescription,
 };
