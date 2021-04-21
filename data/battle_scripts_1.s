@@ -392,6 +392,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectMicDrop @burn then switch
 	.4byte BattleScript_EffectPowerProc @hit self 3x, trigger abilities
 	.4byte BattleScript_EffectMoonshot @sleep foe if user at 1hp
+	.4byte BattleScript_EffectRocksFall @faint self and foe if user at 1hp
 
 
 BattleScript_EffectSleepHit:
@@ -8284,6 +8285,62 @@ BattleScript_ProcEnd::
 BattleScript_EffectMoonshot::
 	jumpifonehp BattleScript_EffectSleepHit
 	goto BattleScript_EffectHit
+
+BattleScript_EffectRocksFall::
+	jumpifonehp BattleScript_EffectOHKOgo
+	goto BattleScript_ButItFailed
+BattleScript_EffectOHKOgo::
+	attackcanceler
+	attackstring
+	ppreduce
+	faintifabilitynotdamp
+	setatkhptozero
+	waitstate
+	jumpifbyte CMP_NO_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_MISSED, BattleScript_RocksFallDoAnimStartLoop
+	call BattleScript_PreserveMissedBitDoMoveAnim
+	goto BattleScript_RocksFallLoop
+BattleScript_RocksFallDoAnimStartLoop:
+	attackanimation
+	waitanimation
+BattleScript_RocksFallLoop:
+	movevaluescleanup
+	accuracycheck BattleScript_RocksFallMissed, ACC_CURR_MOVE
+	typecalc
+	jumpifmovehadnoeffect BattleScript_RocksFallKOFail
+	tryKO BattleScript_RocksFallKOFail
+	trysetdestinybondtohappen
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	resultmessage
+	waitmessage 0x40
+	tryfaintmon BS_TARGET, FALSE, NULL
+	jumpifnexttargetvalid BattleScript_RocksFallLoop
+	tryfaintmon BS_ATTACKER, FALSE, NULL
+	moveendcase MOVEEND_CLEAR_BITS
+	end
+BattleScript_RocksFallMissed:
+	effectivenesssound
+	resultmessage
+	waitmessage 0x40
+	moveendto MOVEEND_NEXT_TARGET
+	jumpifnexttargetvalid BattleScript_RocksFallLoop
+	tryfaintmon BS_ATTACKER, FALSE, NULL
+	end
+BattleScript_RocksFallKOFail::
+	pause 0x40
+	printfromtable gKOFailedStringIds
+	waitmessage 0x40
+	moveendto MOVEEND_NEXT_TARGET
+	jumpifnexttargetvalid BattleScript_RocksFallLoop
+	tryfaintmon BS_ATTACKER, FALSE, NULL
+	end
+
+
 
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker

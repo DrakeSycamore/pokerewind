@@ -2864,10 +2864,10 @@
     {
       "id": "LAYOUT_ROUTE104_PROTOTYPE",
       "name": "Route104_Prototype_Layout",
-      "width": 1,
-      "height": 1,
+      "width": 20,
+      "height": 8,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/Route104_Prototype/border.bin",
       "blockdata_filepath": "data/layouts/Route104_Prototype/map.bin"
     },
@@ -4440,6 +4440,36 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Woods1/border.bin",
       "blockdata_filepath": "data/layouts/Woods1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPOOKHOUSE_D1",
+      "name": "SpookhouseD1_Layout",
+      "width": 6,
+      "height": 5,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/SpookhouseD1/border.bin",
+      "blockdata_filepath": "data/layouts/SpookhouseD1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPOOKHOUSE_C1",
+      "name": "SpookhouseC1_Layout",
+      "width": 6,
+      "height": 5,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/SpookhouseC1/border.bin",
+      "blockdata_filepath": "data/layouts/SpookhouseC1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPOOKHOUSE1",
+      "name": "Spookhouse1_Layout",
+      "width": 20,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/Spookhouse1/border.bin",
+      "blockdata_filepath": "data/layouts/Spookhouse1/map.bin"
     }
   ]
 }

@@ -1069,3 +1069,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/RewindTown1/scripts.inc"
 
 	.include "data/maps/Woods1/scripts.inc"
+
+	.include "data/maps/SpookhouseD1/scripts.inc"
+
+	.include "data/maps/SpookhouseC1/scripts.inc"
+
+	.include "data/maps/Spookhouse1/scripts.inc"
