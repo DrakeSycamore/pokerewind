@@ -11535,7 +11535,7 @@ static void HandleRoomMove(u32 statusFlag, u8 *timer, u8 stringId)
         *timer = 0;
         gBattleCommunication[MULTISTRING_CHOOSER] = stringId + 1;
     }
-    else if gBattleMons[gBattlerAttacker].ability == ABILITY_PERSISTENT
+    else if (gBattleMons[gBattlerAttacker].ability == ABILITY_PERSISTENT)
     {
         gFieldStatuses |= statusFlag;
         *timer = 10;
