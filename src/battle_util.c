@@ -4126,7 +4126,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
-                if (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_PLUS_BOOST)s
+                if (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_PLUS_BOOST)
                 {
                     SET_STATCHANGER(STAT_ATK, 1, FALSE);
                     BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
