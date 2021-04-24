@@ -6577,7 +6577,7 @@ static void Cmd_setgravity(void)
     {
         gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     }
-    else if gBattleMons[gBattlerAttacker].ability == ABILITY_PERSISTENT
+    else if (gBattleMons[gBattlerAttacker].ability == ABILITY_PERSISTENT)
     {
         gFieldStatuses |= STATUS_FIELD_GRAVITY;
         gFieldTimers.gravityTimer = 10;

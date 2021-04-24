@@ -569,7 +569,7 @@ const u8 gAbilityNames[ABILITIES_COUNT_GEN8][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_OCEAN_MANTLE] = _("Ocean Mantle"),
     [ABILITY_HORNY_JAIL] =   _("Horny Jail"),
     [ABILITY_THEORYCRAFT] =  _("Theorycraft"),
-    [ABILITY_PERSISTENT] =   _("Space Timer"),
+    [ABILITY_PERSISTENT] =   _("Plane Shift"),
 
 };
 
