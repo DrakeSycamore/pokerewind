@@ -22,6 +22,11 @@
       "direction": "left",
       "offset": 5,
       "map": "MAP_SPOOKHOUSE_C1"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_NEW_MAP1"
     }
   ],
   "object_events": [

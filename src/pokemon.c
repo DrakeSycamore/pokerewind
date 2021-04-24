@@ -6078,7 +6078,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem, u
     else
         holdEffect = ItemId_GetHoldEffect(heldItem);
 
-    if (holdEffect == HOLD_EFFECT_PREVENT_EVOLVE && type != 3)
+    if ((holdEffect == HOLD_EFFECT_PREVENT_EVOLVE || holdEffect == HOLD_EFFECT_EVIOLITE) && type != 3)
         return SPECIES_NONE;
 
     switch (type)

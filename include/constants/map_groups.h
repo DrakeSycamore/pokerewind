@@ -560,6 +560,9 @@
 #define MAP_SPOOKHOUSE_D1                               (3 | (27 << 8))
 #define MAP_SPOOKHOUSE_C1                               (4 | (27 << 8))
 #define MAP_SPOOKHOUSE1                                 (5 | (27 << 8))
+#define MAP_NEW_MAP1                                    (6 | (27 << 8))
+#define MAP_SPOOKHOUSE2                                 (7 | (27 << 8))
+#define MAP_SPOOKHOUSEI1                                (8 | (27 << 8))
 
 // Map Group 28
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))

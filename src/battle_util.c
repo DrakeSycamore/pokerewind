@@ -7042,7 +7042,11 @@ static u16 CalcMoveBasePower(u16 move, u8 battlerAtk, u8 battlerDef)
         break;
     case EFFECT_SANDBLASTER:
         if (WEATHER_HAS_EFFECT && gBattleWeather & WEATHER_SANDSTORM_ANY)
-            basePower = basePower * 3 / 2;
+            basePower *= (3/2);
+        break;
+    case EFFECT_DEFENSE_DOWN_HIT:
+        if (gFieldStatuses & STATUS_FIELD_GRAVITY && move == MOVE_GRAV_APPLE)
+            basePower *= (3/2);
         break;
     }
 

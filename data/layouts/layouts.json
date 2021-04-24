@@ -4470,6 +4470,36 @@
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/Spookhouse1/border.bin",
       "blockdata_filepath": "data/layouts/Spookhouse1/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP1",
+      "name": "NewMap1_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/NewMap1/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPOOKHOUSE2",
+      "name": "spookhouse2_Layout",
+      "width": 25,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/spookhouse2/border.bin",
+      "blockdata_filepath": "data/layouts/spookhouse2/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPOOKHOUSEI1",
+      "name": "Spookhousei1_Layout",
+      "width": 14,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/Spookhousei1/border.bin",
+      "blockdata_filepath": "data/layouts/Spookhousei1/map.bin"
     }
   ]
 }

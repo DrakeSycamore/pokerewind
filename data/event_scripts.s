@@ -1075,3 +1075,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/SpookhouseC1/scripts.inc"
 
 	.include "data/maps/Spookhouse1/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"
+
+	.include "data/maps/spookhouse2/scripts.inc"
+
+	.include "data/maps/Spookhousei1/scripts.inc"
