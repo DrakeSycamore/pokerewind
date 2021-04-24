@@ -3448,7 +3448,7 @@ u8 TryTerrainFormChange(u8 battler)
             SET_BATTLER_TYPE(battler, TYPE_ELECTRIC);
             ret = 2;
         }
-        else if gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN && !IS_BATTLER_OF_TYPE(battler, TYPE_PSYCHIC))
+        else if (gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN && !IS_BATTLER_OF_TYPE(battler, TYPE_PSYCHIC))
         {
             SET_BATTLER_TYPE(battler, TYPE_PSYCHIC);
             ret = 3;
@@ -4126,7 +4126,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = 1;
-                if gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_PLUS_BOOST
+                if (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_PLUS_BOOST)s
                 {
                     SET_STATCHANGER(STAT_ATK, 1, FALSE);
                     BattleScriptPushCursorAndCallback(BattleScript_BattlerAbilityStatRaiseOnSwitchIn);
