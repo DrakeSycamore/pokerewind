@@ -4444,7 +4444,7 @@
     {
       "id": "LAYOUT_SPOOKHOUSE_D1",
       "name": "SpookhouseD1_Layout",
-      "width": 6,
+      "width": 7,
       "height": 5,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_InsideShip",
@@ -4454,7 +4454,7 @@
     {
       "id": "LAYOUT_SPOOKHOUSE_C1",
       "name": "SpookhouseC1_Layout",
-      "width": 6,
+      "width": 7,
       "height": 5,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_InsideShip",
