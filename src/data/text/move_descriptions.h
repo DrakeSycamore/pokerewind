@@ -3051,7 +3051,6 @@ static const u8 sMOVE_ASSASSINATEDescription[] = _(
     "Super-effective hits deal\n"
     "3x rather than 2x.");
 
-
 static const u8 sMOVE_VENT_KILLDescription[] = _(
     "Crushes the foe, then \n"
     " switches out via a vent.");
@@ -3105,9 +3104,20 @@ static const u8 sMOVE_MOOD_CRUSHDescription[] = _(
     "makes target Defeatist.");
 
 static const u8 sMOVE_POWER_PROCDescription[] = _(
-    "Hits itself to activate\n"
-    "its own abilities.");
+    "Hits itself, activating\n"
+    "its abilities thrice.");
 
+static const u8 sMOVE_MOONSHOTDescription[] = _(
+    "A lucky last resort. If\n"
+    "user is at 1HP, foe sleeps");
+
+static const u8 sMOVE_ROCKS_FALLDescription[] = _(
+    "Everyone dies. Can only\n"
+    "be used at 1HP.");
+
+static const u8 sMOVE_REDISTRIBUTEDescription[] = _(
+    "Grants its stat changes\n"
+    "to the target.");
 
 static const u8 sNotDoneYetDescription[] = _(
     "Not done yet.");
@@ -3920,5 +3930,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_GAMER_RAGE - 1] = sMOVE_GAMER_RAGEDescription,
     [MOVE_MOOD_CRUSH - 1] = sMOVE_MOOD_CRUSHDescription,
     [MOVE_POWER_PROC - 1] = sMOVE_POWER_PROCDescription,
-
+    [MOVE_MOONSHOT - ] = sMOVE_MOONSHOTDescription,,
+    [MOVE_ROCKS_FALL - 1] = sMOVE_ROCKS_FALLDescription,,
+    [MOVE_REDISTRIBUTE - 1] = sMOVE_REDISTRIBUTEDescription,,
 };

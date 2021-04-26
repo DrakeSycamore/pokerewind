@@ -8522,7 +8522,7 @@ static void Cmd_various(void)
     case VARIOUS_RESET_TIMERS:
         gWishFutureKnock.weatherDuration = 5;
 	gFieldTimers.mistyTerrainTimer = 5;
-	return; //fucking horrible effect. Has to check everything individually then set everything it found. Eh.
+	return; //horrible effect. Has to check everything individually then set everything it found. Not sure how to include items. Eh.
     case VARIOUS_SET_MOOD_CRUSH:
         switch (gBattleMons[gActiveBattler].ability)
         {
@@ -8544,6 +8544,13 @@ static void Cmd_various(void)
              gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 3);
         else
              gBattlescriptCurrInstr +=7;
+        return;
+    case VARIOUS_COPY_USER_STATS
+        for (i = 0; i < NUM_BATTLE_STATS; i++)
+        {
+            gBattleMons[gBattlerTarget].statStages[i] = gBattleMons[gBattlerAttacker].statStages[i];
+        }
+        gBattlescriptCurrInstr += 5; // Has an unused jump ptr(possibly for a failed attempt) parameter.
         return;
     }
     gBattlescriptCurrInstr += 3;

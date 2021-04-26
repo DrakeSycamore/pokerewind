@@ -174,6 +174,7 @@
 #define VARIOUS_RESET_TIMERS			106
 #define VARIOUS_SET_MOOD_CRUSH                  107
 #define VARIOUS_JUMP_IF_ONE_HP                  108
+#define VARIOUS_COPY_USER_STATS                 109
 
 
 // Cmd_manipulatedamage

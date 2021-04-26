@@ -797,4 +797,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_GAMER_RAGE] = _("Gamer Rage"),
     [MOVE_MOOD_CRUSH] = _("Mood Crush"),
     [MOVE_POWER_PROC] = _("War Drum"),
-};
+    [MOVE_MOONSHOT] = _("Moonshot"),
+    [MOVE_ROCKS_FALL] = _("Rocks Fall"),
+    [MOVE_REDISTRIBUTE] = _("Redistribute"),
+}; 

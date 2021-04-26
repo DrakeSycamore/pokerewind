@@ -393,6 +393,7 @@ gBattleScriptsForMoveEffects:: @ 82D86A8
 	.4byte BattleScript_EffectPowerProc @hit self 3x, trigger abilities
 	.4byte BattleScript_EffectMoonshot @sleep foe if user at 1hp
 	.4byte BattleScript_EffectRocksFall @faint self and foe if user at 1hp
+	.4byte BattleScript_EffectRedistribute @copy user's stat changes to foe
 
 
 BattleScript_EffectSleepHit:
@@ -8340,7 +8341,16 @@ BattleScript_RocksFallKOFail::
 	tryfaintmon BS_ATTACKER, FALSE, NULL
 	end
 
-
+BattleScript_EffectRedistribute::
+	attackcanceler
+	attackstring
+	ppreduce
+	copyuserstats BattleScript_ButItFailed
+	attackanimation
+	waitanimation
+	printstring STRINGID_TARGETCOPIEDUSERSTATCHANGES
+	waitmessage 0x40
+	goto BattleScript_MoveEnd
 
 BattleScript_BattlerAbilityNoFucks::
 	copybyte gBattlerAbility, gBattlerAttacker

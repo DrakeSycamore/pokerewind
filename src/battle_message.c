@@ -698,6 +698,7 @@ static const u8 sText_CuriousMedicineEnters[] = _("{B_EFF_NAME_WITH_PREFIX}'s\ns
 static const u8 sText_BattlerAbilityRaisedStatDrastically[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\n drastically raised its {B_BUFF1}!");
 static const u8 sText_NoFucksEnters[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nreset {B_EFF_NAME_WITH_PREFIX}'s stat changes!");
 static const u8 sText_OppositeDayEnters[] = _("The type chart was inverted!");
+static const u8 sText_TargetCopiedUserStatChanges[] = _("{B_DEF_NAME_WITH_PREFIX}'s stat changes\nwere replaced by {B_ATK_NAME_WITH_PREFIX}'s!");
 
 
 
@@ -1261,6 +1262,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_BATTLERABILITYRAISEDSTATDRASTICALLY - 12] = sText_BattlerAbilityRaisedStatDrastically,
     [STRINGID_NOFUCKSENTERS - 12] = sText_NoFucksEnters,
     [STRINGID_OPPOSITEDAYENTERS - 12] = sText_OppositeDayEnters,
+    [STRINGID_TARGETCOPIEDUSERSTATCHANGES - 12] = sText_TargetCopiedUserStatChanges,
 
 
 };

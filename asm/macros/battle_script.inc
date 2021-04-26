@@ -1789,6 +1789,11 @@
 	.4byte \ptr
 	.endm
 
+	.macro copyuserstats ptr:req
+	various BS_ATTACKER, VARIOUS_COPY_USER_STATS
+	.4byte \ptr
+	.endm
+
 @ helpful macros
 	.macro setstatchanger stat:req, stages:req, down:req
 	setbyte sSTATCHANGER \stat | \stages << 3 | \down << 7
