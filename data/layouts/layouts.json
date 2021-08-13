@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_REWIND_ROUTE1",
       "name": "RewindRoute1_Layout",
       "width": 50,
-      "height": 40,
+      "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/RewindRoute1/border.bin",
@@ -4430,6 +4430,46 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/RewindTown1/border.bin",
       "blockdata_filepath": "data/layouts/RewindTown1/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMEGE_TOWN",
+      "name": "HomegeTown_Layout",
+      "width": 38,
+      "height": 46,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HomegeTown/border.bin",
+      "blockdata_filepath": "data/layouts/HomegeTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMEGE_TOWN_PLAYER_HOUSE_1F",
+      "name": "HomegeTown_PlayerHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/HomegeTown_PlayerHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/HomegeTown_PlayerHouse_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMEGE_TOWN_PLAYER_HOUSE_2F",
+      "name": "HomegeTown_PlayerHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/HomegeTown_PlayerHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/HomegeTown_PlayerHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOMEGE_TOWN_PROFESSOR_SEQUOIAS_LAB",
+      "name": "HomegeTown_ProfessorSequoiasLab_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/HomegeTown_ProfessorSequoiasLab/border.bin",
+      "blockdata_filepath": "data/layouts/HomegeTown_ProfessorSequoiasLab/map.bin"
     }
   ]
 }

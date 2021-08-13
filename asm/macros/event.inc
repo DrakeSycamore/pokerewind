@@ -682,6 +682,9 @@
 		.4byte \pointer2 @ text
 		.4byte \pointer3 @ text
 		.4byte \pointer4 @ event script
+	.elseif \type == TRAINER_BATTLE_EARLY_RIVAL
+		.4byte \pointer1 @ text
+		.4byte \pointer2 @ text
 	.elseif \type == TRAINER_BATTLE_PYRAMID
 		.4byte \pointer1 @ text
 		.4byte \pointer2 @ text
@@ -738,6 +741,10 @@
 	trainerbattle TRAINER_BATTLE_SINGLE_NO_INTRO_TEXT, \trainer, 0, \lose_text
 	.endm
 
+	@ Starts a trainer battle with victory text if the player loses.
+	.macro trainerbattle_earlyrival trainer:req, lose_text:req, victory_text:req
+	trainerbattle TRAINER_BATTLE_EARLY_RIVAL, \trainer, 0, \lose_text, \victory_text
+	.endm
 
 	@ Starts a trainer battle using the battle information stored in RAM (usually by trainerbattle, which actually calls this 
 	@ command behind-the-scenes), and blocks script execution until the battle finishes.
@@ -1251,7 +1258,7 @@
 
 	.macro createvobject sprite:req, byte2:req, x:req, y:req, elevation, direction
 	.byte 0xaa
-	.byte \sprite
+	.2byte \sprite
 	.byte \byte2
 	.2byte \x
 	.2byte \y
@@ -1853,4 +1860,30 @@
 	.byte \warp
 	.2byte \X
 	.2byte \Y
+	.endm
+
+	.macro setcustomwildbattle species:req, level:req, item=ITEM_NONE, nature=NUM_NATURES, abilityNum=0, hpEv=0, atkEv=0, defEv=0, speedEv=0, spAtkEv=0, spDefEv=0, hpIv=USE_RANDOM_IVS, atkIv=USE_RANDOM_IVS, defIv=USE_RANDOM_IVS, speedIv=USE_RANDOM_IVS, spAtkIv=USE_RANDOM_IVS, spDefIv=USE_RANDOM_IVS, move1=MOVE_NONE, move2=MOVE_NONE, move3=MOVE_NONE, move4=MOVE_NONE, isShiny=FALSE
+	.byte 0xe4
+	.2byte \species
+	.byte \level
+	.2byte \item
+	.byte \nature
+	.byte \abilityNum
+	.byte \hpEv
+	.byte \atkEv
+	.byte \defEv
+	.byte \speedEv
+	.byte \spAtkEv
+	.byte \spDefEv
+	.byte \hpIv
+	.byte \atkIv
+	.byte \defIv
+	.byte \speedIv
+	.byte \spAtkIv
+	.byte \spDefIv
+	.2byte \move1
+	.2byte \move2
+	.2byte \move3
+	.2byte \move4
+	.byte \isShiny
 	.endm

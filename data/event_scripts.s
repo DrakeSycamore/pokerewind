@@ -1067,3 +1067,11 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/RewindRoute1/scripts.inc"
 
 	.include "data/maps/RewindTown1/scripts.inc"
+
+	.include "data/maps/HomegeTown/scripts.inc"
+
+	.include "data/maps/HomegeTown_PlayerHouse_1F/scripts.inc"
+
+	.include "data/maps/HomegeTown_PlayerHouse_2F/scripts.inc"
+
+	.include "data/maps/HomegeTown_ProfessorSequoiasLab/scripts.inc"
