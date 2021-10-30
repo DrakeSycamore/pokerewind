@@ -47,13 +47,13 @@ voicegroup003:: @ 86763D0
 	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_close_hihat, 255, 127, 0, 188  @ Close Hi Hat
 	voice_directsound_no_resample 64, 34, DirectSoundWaveData_sc88pro_open_low_conga, 255, 0, 255, 0  @ 867643C
 	voice_directsound_no_resample 60, 79, DirectSoundWaveData_unknown_open_hihat, 255, 242, 141, 0  @ Open Hi Hat
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676454
+	voice_directsound 72, 44, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ Mid Tom
 	voice_directsound 64, 24, DirectSoundWaveData_unused_sc55_tom, 255, 0, 255, 226  @ Unused High Tom
 	voice_directsound 63, 104, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231  @ Cymbal Crash 1
 	voice_directsound_no_resample 64, 24, DirectSoundWaveData_unused_sc55_tom, 255, 0, 255, 226 @ Unused High Tom
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676484
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 8676490
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 867649C
+	voice_directsound_no_resample 64, 24, DirectSoundWaveData_dance_drums_ride_bell, 255, 165, 103, 231  @ 867664C
 	voice_directsound_no_resample 66, 34, DirectSoundWaveData_sc88pro_tambourine, 255, 127, 77, 204  @ Tambourine
 	voice_directsound_no_resample 64, 14, DirectSoundWaveData_trinity_cymbal_crash, 255, 231, 0, 188  @ Trinity Crash
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86764C0
@@ -81,7 +81,7 @@ voicegroup003:: @ 86763D0
 	voice_directsound_no_resample 64, 80, DirectSoundWaveData_sc88pro_orchestra_snare, 255, 0, 255, 242  @ 86765C8
 	voice_directsound 68, 34, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ 86765D4
 	voice_directsound_no_resample 60, 64, DirectSoundWaveData_sc88pro_rnd_snare, 255, 0, 255, 242  @ 86765E0
-	voice_directsound 72, 44, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ 86765EC
+	voice_directsound_no_resample 64, 39, DirectSoundWaveData_sd90_open_triangle, 255, 242, 103, 188  @ 8676508
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0  @ 86765F8
 	voice_directsound_no_resample 64, 24, DirectSoundWaveData_sc88pro_jingle_bell, 255, 0, 255, 0  @ Jingle Bells
 	voice_directsound 80, 94, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226  @ 8676610
